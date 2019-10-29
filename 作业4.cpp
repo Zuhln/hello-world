@@ -3,13 +3,13 @@
 //编程：任意输入5个数字，将它们组合为最大的5位数输出。
 #include<stdio.h>
 int main(){
-	int x[4],t,i,j,k,o,p=1,q=0;
+	int x[5],t,i,j,k; 
 	for(t=0;t<=4;t++){
 	scanf("%d",&x[t]);
 	}
-	for(i=0;i<=4;i++){
-		for(j=i+1;j<=4;j++){
-			if(x[i]>x[j]){
+	for(i=0;i<t-1;i++){
+		for(j=i+1;j<=t-1;j++){
+			if(x[i]<x[j]){
 				k=x[i];
 				x[i]=x[j];
 				x[j]=k;
@@ -17,12 +17,7 @@ int main(){
 		}
 	}
 	for(t=0;t<=4;t++){
-		for(o=0;o<t;o++){
-			p=10*p;
-		}
-		q=q+x[t]*p;
-		p=1;
+		printf("%d",x[t]);
 	}
-	printf("%d",q);
 	return 0;
-} 
+}
