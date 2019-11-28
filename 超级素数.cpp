@@ -48,4 +48,5 @@ int main(){
 		Sum=Sum+spvalue[j];
 	}
 	printf("verage:%d",Sum/i);
+	return 0; 
 } 
